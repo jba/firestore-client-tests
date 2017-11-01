@@ -4,7 +4,7 @@ This repo contains:
 
 - `proto`: the protobuffers defining the test format.
 
-- `testdata`: the tests, in as text protos.
+- `testdata`: the tests, as text protos.
 
 - `cmd/generate-firestore-tests`: the Go program that generates the tests.
 
