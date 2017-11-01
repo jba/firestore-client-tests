@@ -1,3 +1,4 @@
+
 description: "ServerTimestamp with dotted field"
 update: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

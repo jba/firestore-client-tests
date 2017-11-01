@@ -1,3 +1,7 @@
+# A ServerTimestamp value can occur at any depth. In this case, the transform
+# applies to the field path "b.c". Since "c" is removed from the write, "b"
+# becomes empty, so it is also removed from the write.
+
 description: "nested ServerTimestamp field"
 create: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

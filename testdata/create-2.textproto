@@ -1,3 +1,5 @@
+# Create treats its map keys literally. There is no splitting on dots or escaping.
+
 description: "don\342\200\231t split on dots"
 create: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

@@ -1,3 +1,6 @@
+# The ServerTimestamp sentinel must be the value of a field. Firestore transforms
+# don't support array indexing.
+
 description: "ServerTimestamp cannot be in an array value"
 create: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

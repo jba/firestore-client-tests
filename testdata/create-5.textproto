@@ -1,3 +1,6 @@
+# A document can have more than one ServerTimestamp field. Since all the
+# ServerTimestamp fields are removed, the only field in the write is "a".
+
 description: "multiple ServerTimestamp fields"
 create: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

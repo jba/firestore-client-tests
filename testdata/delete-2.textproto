@@ -1,3 +1,4 @@
+
 description: "delete with last-update-time precondition"
 delete: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

@@ -1,3 +1,6 @@
+# A simple call to DocumentRef.Create. A Create is just a write with a
+# precondition that the document doesn't exist.
+
 description: "basic create"
 create: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

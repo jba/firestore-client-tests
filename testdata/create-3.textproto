@@ -1,3 +1,8 @@
+# A key with the special ServerTimestamp sentinel is removed from the data being
+# written. Instead it appears in a separate Transform action. Note that in these
+# tests, the string "ServerTimestamp" should be replaced with the special
+# ServerTimestamp value.
+
 description: "a ServerTimestamp field becomes a transform"
 create: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"

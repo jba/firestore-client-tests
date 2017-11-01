@@ -1,3 +1,5 @@
+# The Delete sentinel makes no sense for this method.
+
 description: "Delete cannot appear in data"
 create: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
