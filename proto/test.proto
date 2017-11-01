@@ -1,0 +1,74 @@
+// Tests for firestore clients.
+
+syntax = "proto3";
+
+package tests;
+
+import "google/firestore/v1beta1/firestore.proto";
+import "google/firestore/v1beta1/common.proto";
+
+message Test {
+  string description = 1;
+
+  oneof test {
+    GetTest         get = 2;
+    CreateTest      create = 3;
+    SetTest         set = 4;
+    UpdateTest      update = 5;
+    UpdatePathsTest update_paths = 6;
+    DeleteTest      delete = 7;
+  }
+}
+
+message GetTest {
+  string doc_ref_path = 1;
+  google.firestore.v1beta1.GetDocumentRequest request = 2;
+}
+
+message CreateTest {
+  string doc_ref_path = 1;
+  string json_data = 2;
+  google.firestore.v1beta1.CommitRequest request = 3; // expected request
+  bool is_error = 4; // if true, client should return an error without doing an RPC
+}
+
+message SetTest {
+  string doc_ref_path = 1;
+  repeated SetOption options = 2;
+  string json_data = 3;
+  google.firestore.v1beta1.CommitRequest request = 4;
+  bool is_error = 5;
+}
+
+message UpdateTest {
+  string doc_ref_path = 1;
+  google.firestore.v1beta1.Precondition precondition = 2;
+  string json_data  = 3;
+  google.firestore.v1beta1.CommitRequest request = 4;
+  bool is_error = 5;
+}
+
+message UpdatePathsTest {
+  string doc_ref_path = 1;
+  google.firestore.v1beta1.Precondition precondition = 2;
+  repeated FieldPath field_paths = 3;
+  repeated string json_values = 4;
+  google.firestore.v1beta1.CommitRequest request = 5;
+  bool is_error = 6;
+}
+
+message DeleteTest {
+  string doc_ref_path = 1;
+  google.firestore.v1beta1.Precondition precondition = 2;
+  google.firestore.v1beta1.CommitRequest request = 3;
+  bool is_error = 4;
+}
+
+message SetOption {
+  bool all = 1;  // If true, this is a MergeAll option; "fields" is ignored.
+  repeated FieldPath fields = 2; // field paths for a Merge option
+}
+
+message FieldPath {
+  repeated string field = 1;
+}
