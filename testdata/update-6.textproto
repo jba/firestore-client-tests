@@ -1,0 +1,19 @@
+description: "Delete alone"
+update: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  json_data: "{\"a\": \"Delete\"}"
+  request: <
+    database: "projects/projectID/databases/(default)"
+    writes: <
+      update: <
+        name: "projects/projectID/databases/(default)/documents/C/d"
+      >
+      update_mask: <
+        field_paths: "a"
+      >
+      current_document: <
+        exists: true
+      >
+    >
+  >
+>

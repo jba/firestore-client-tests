@@ -1,0 +1,22 @@
+description: "delete with last-update-time precondition"
+delete: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  precondition: <
+    update_time: <
+      seconds: 1483326245
+      nanos: 6
+    >
+  >
+  request: <
+    database: "projects/projectID/databases/(default)"
+    writes: <
+      delete: "projects/projectID/databases/(default)/documents/C/d"
+      current_document: <
+        update_time: <
+          seconds: 1483326245
+          nanos: 6
+        >
+      >
+    >
+  >
+>

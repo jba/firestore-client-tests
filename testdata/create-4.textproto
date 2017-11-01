@@ -1,0 +1,31 @@
+description: "nested ServerTimestamp field"
+create: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  json_data: "{\"a\": 1, \"b\": {\"c\": \"ServerTimestamp\"}}"
+  request: <
+    database: "projects/projectID/databases/(default)"
+    writes: <
+      update: <
+        name: "projects/projectID/databases/(default)/documents/C/d"
+        fields: <
+          key: "a"
+          value: <
+            integer_value: 1
+          >
+        >
+      >
+      current_document: <
+        exists: false
+      >
+    >
+    writes: <
+      transform: <
+        document: "projects/projectID/databases/(default)/documents/C/d"
+        field_transforms: <
+          field_path: "b.c"
+          set_to_server_value: REQUEST_TIME
+        >
+      >
+    >
+  >
+>

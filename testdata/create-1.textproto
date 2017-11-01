@@ -1,0 +1,22 @@
+description: "basic create"
+create: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  json_data: "{\"a\": 1}"
+  request: <
+    database: "projects/projectID/databases/(default)"
+    writes: <
+      update: <
+        name: "projects/projectID/databases/(default)/documents/C/d"
+        fields: <
+          key: "a"
+          value: <
+            integer_value: 1
+          >
+        >
+      >
+      current_document: <
+        exists: false
+      >
+    >
+  >
+>

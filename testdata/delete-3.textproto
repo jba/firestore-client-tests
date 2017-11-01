@@ -1,0 +1,16 @@
+description: "delete with exists precondition"
+delete: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  precondition: <
+    exists: true
+  >
+  request: <
+    database: "projects/projectID/databases/(default)"
+    writes: <
+      delete: "projects/projectID/databases/(default)/documents/C/d"
+      current_document: <
+        exists: true
+      >
+    >
+  >
+>

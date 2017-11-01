@@ -1,0 +1,6 @@
+description: "Delete cannot be in an array value"
+update: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  json_data: "{\"a.b\": 1, \"a\": [2, 3, \"Delete\"]}"
+  is_error: true
+>

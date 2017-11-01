@@ -1,0 +1,6 @@
+description: "no paths"
+update: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  json_data: "{}"
+  is_error: true
+>

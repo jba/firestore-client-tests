@@ -1,0 +1,6 @@
+description: "one field cannot be a prefix of another"
+update: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  json_data: "{\"a.b\": 1, \"a\": 2}"
+  is_error: true
+>

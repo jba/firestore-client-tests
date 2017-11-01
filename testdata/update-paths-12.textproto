@@ -1,0 +1,17 @@
+description: "the same field cannot occur more than once"
+update_paths: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  field_paths: <
+    field: "a"
+  >
+  field_paths: <
+    field: "b"
+  >
+  field_paths: <
+    field: "a"
+  >
+  json_values: "1"
+  json_values: "2"
+  json_values: "3"
+  is_error: true
+>

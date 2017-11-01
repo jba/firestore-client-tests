@@ -1,0 +1,6 @@
+description: "Delete cannot appear in data"
+create: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  json_data: "{\"a\": 1, \"b\": \"Delete\"}"
+  is_error: true
+>

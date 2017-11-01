@@ -1,0 +1,12 @@
+description: "Exists precondition is invalid"
+update_paths: <
+  doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  precondition: <
+    exists: true
+  >
+  field_paths: <
+    field: "a"
+  >
+  json_values: "1"
+  is_error: true
+>
