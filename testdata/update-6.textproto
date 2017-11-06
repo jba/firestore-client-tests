@@ -6,6 +6,11 @@
 description: "last-update-time precondition"
 update: <
   doc_ref_path: "projects/projectID/databases/(default)/documents/C/d"
+  precondition: <
+    update_time: <
+      seconds: 42
+    >
+  >
   json_data: "{\"a\": 1}"
   request: <
     database: "projects/projectID/databases/(default)"
@@ -23,7 +28,9 @@ update: <
         field_paths: "a"
       >
       current_document: <
-        exists: true
+        update_time: <
+          seconds: 42
+        >
       >
     >
   >
