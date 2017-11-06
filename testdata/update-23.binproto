@@ -1,0 +1,13 @@
+
+Delete with a dotted field*Ó
+4projects/projectID/databases/(default)/documents/C/d#{"a": 1, "b.c": "Delete", "b.d": 2}"ê
+&projects/projectID/databases/(default)f
+a
+b.c
+b.d"
+Q
+4projects/projectID/databases/(default)/documents/C/d
+a
+b2	
+
+d

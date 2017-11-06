@@ -1,0 +1,3 @@
+
+/Delete cannot be anywhere inside an array value*U
+4projects/projectID/databases/(default)/documents/C/d{"a": [1, {"b": "Delete"}]}(
