@@ -1,3 +1,0 @@
-
-8ServerTimestamp cannot be anywhere inside an array value^
-4projects/projectID/databases/(default)/documents/C/d${"a": [1, {"b": "ServerTimestamp"}]} 

@@ -1,3 +1,0 @@
-
-+ServerTimestamp cannot be in an array value*Z
-4projects/projectID/databases/(default)/documents/C/d {"a": [1, 2, "ServerTimestamp"]}(
