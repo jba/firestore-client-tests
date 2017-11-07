@@ -51,7 +51,7 @@ message CreateTest {
 // A call to DocumentRef.Set.
 message SetTest {
   string doc_ref_path = 1;         // path of doc
-  repeated SetOption options = 2;  // options to the Set call, if any
+  SetOption option = 2;            // option to the Set call, if any
   string json_data = 3;            // data (see CreateTest.json_data)
   google.firestore.v1beta1.CommitRequest request = 4; // expected request
   bool is_error = 5;               // call signals an error
